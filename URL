@@ -6,7 +6,18 @@ Created on Tue Jun 15 10:08:41 2021
 @author: AnnaNardelli
 """
 import requests
+import io
   
 url = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CS104ABETSyllabus.txt"
 page = requests.get(url)
-print(page.text)
+data = page.text
+
+print(data)
+words = []
+for l in data:
+    l=l.replace("\n","")
+    sp = l.split(" ")
+    for w in sp:
+        words.append(w)
+        
+print(words)
