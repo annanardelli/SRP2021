@@ -7,6 +7,6 @@ Created on Tue Jun 15 10:08:41 2021
 """
 import requests
   
-url = "https://raw.githubusercontent.com/annanardelli/SRP2021/9bee8263a71cfc6c89ff6649cd93dbc5d7757c45/CS104ABETSyllabus.txt"
+url = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CS104ABETSyllabus.txt"
 page = requests.get(url)
 print(page.text)
