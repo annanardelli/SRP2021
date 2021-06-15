@@ -1,0 +1,431 @@
+B.S. in Computer Science (CS.BS) - DRAFT COPY 1
+
+
+
+
+
+
+
+
+2 B.S. in Computer Science (CS.BS)
+
+
+B.S. IN COMPUTER SCIENCE(CS.BS)
+Code
+ Title
+ Credits
+ 
+
+Major Requirements/Computer Science (55 credits)
+  
+CS-104
+ Introduction to Problem Solving andSoftware Development
+ 3
+ 
+(Satis.es Technological Literacy (TL) in GeneralEducation)
+
+  
+CS-175
+ Introduction to Computer Science I
+ 3
+ 
+CS-175L
+ Introduction to Computer Science I lab
+ 1
+ 
+CS-176
+ Introduction to Computer Science II
+ 3
+ 
+CS-176L
+ Introduction to Computer Science II Lab
+ 1
+ 
+CS-201
+ Introduction to Computer Programming forData Science
+ 1
+ 
+CS-205
+ Data Structures and Algorithms
+ 3
+ 
+CS-205L
+ Data Structures and Algorithms Lab
+ 1
+ 
+CS-286
+ Computer Architecture I
+ 3
+ 
+CS-305
+ Advanced Computing
+ 3
+ 
+CS-310
+ Advanced Object-Oriented Programmingand Design
+ 3
+ 
+CS-325
+ Software Engineering Concepts
+ 3
+ 
+CS-414
+ Computer Networks
+ 3
+ 
+CS-432
+ Database Systems
+ 3
+ 
+CS-438
+ Operating Systems Analysis
+ 3
+ 
+CS-450
+ Cyber Security
+ 3
+ 
+CS-492A
+ Computer Science Senior Project A
+ 3
+ 
+CS-492B
+ Computer Science Senior Project B
+ 3
+ 
+(CS-492A and CS-492B satisfy Reasoned Oral Discourse(RD) in General Education)
+
+  
+Select 6 credits of Computer Science (CS) at the 200-levelor higher 1
+ 6
+ 
+Select 3 credits of Computer Science (CS) at the 400-levelor higher (except CS-488 and CS-489)
+ 3
+ 
+Interdisciplinary Requirements (28 credits)
+  
+MA-125
+ Calculus with Analytic Geometry I
+ 4
+ 
+MA-126
+ Calculus with Analytic Geometry II
+ 4
+ 
+MA-130
+ Applied Discrete Mathematics
+ 3
+ 
+MA-220
+ Probability and Statistics I
+ 3
+ 
+(Any of the Math courses satisfy the Mathematicsrequirement in General Education)
+
+  
+Select 8 credits from ONE of the following Groups:
+ 8
+ 
+(Science courses listed below satisfy Natural Science (NS)in General Education)
+
+  
+Group A
+  
+CE-111/111L
+
+ General Chemistry I
+  
+CE-112/112L
+
+ General Chemistry II
+  
+Group B
+  
+PH-211/211L
+
+ General Physics with Calculus I
+  
+PH-212/212L
+
+ General Physics with Calculus II
+  
+Group C
+  
+BY-109& BY-110
+
+ Introduction to Biodiversity and Evolutionand Introduction to Cell and MolecularBiology
+  
+Select 3 credits from the following courses:
+ 3
+ 
+PR-407
+
+ Morality and Community
+  
+PR-432
+
+ Ethics and Professionalism in Science andEngineering
+  
+PR-449
+
+ The Helping Professions in Film and Media
+  
+PR-457
+
+ Issues in Cognitive Science
+  
+PR-460
+
+ How Technology Affects Values
+  
+Select one of the following:
+ 3
+ 
+PH-301
+
+ Modern Physics
+  
+PH-302
+
+ Theoretical Physics
+  
+BY-201
+
+ Introduction to Biotechnology
+  
+BY-205
+
+ Zoology
+  
+BY-214
+
+ Botany
+  
+BY-220
+
+ Environmental Biology and Policy
+  
+BY-221
+
+ Introduction to Global Sustainability
+  
+MA-311
+
+ Differential Equations
+  
+MA-318
+
+ Combinatorics and Graph Theory
+  
+MA-221
+
+ Linear Algebra
+  
+MA-225
+
+ Calculus with Analytic Geometry III
+  
+MA-320
+
+ Probability and Statistics II
+  
+Free Electives (7 credits) 2
+  
+Select 7 credits of free electives 2
+ 7
+ 
+General Education Requirements (30 credits) 3
+  
+Complete 30 credits as outlined on the General Educationtable 3
+ 30
+ 
+Total Credits
+ 120
+ 
+
+
+1
+ Except the following courses: CS-288, CS-289, CS-388,CS-389, CS-488, CS-489, CS-212, CS-222, CS-302, CS-312, CS-316,CS-320, CS-322, and CS-330
+
+ 
+2
+ Please consult with your advisor regarding the required number of freeelectives that must be completed.
+
+ 
+3
+ The General Education curriculum requires the completion of 45 credits.However, students may be able to share credits from within their majoror interdisciplinary requirements. Please consult with your advisor todetermine which General Education (http://catalog.monmouth.edu/undergraduate-catalog/academic-programs-support-services-regulations/general-education-requirements/) courses must becompleted.
+
+ 
+
+
+Note:
+•
+
+54 credits must be completed at the 200-level or higher.
+
+
+
+Sequence Chart
+First Year
+ 
+Fall
+ Credits
+ Spring
+ Credits
+ 
+
+EN-101 College Composition I
+ 3
+ EN-102 College Composition II
+ 3
+ 
+CS-104 Introduction toProblem Solving and SoftwareDevelopment (Gen*EdTechnological Literacy (TL))
+ 3
+ CS-175& 175L
+ 4
+ 
+Gen*Ed Aesthetics (AT)AR,DA,MU,TH
+ 3
+ MA-109 Pre-CalculusMathematics (Gen*EdMathematics)
+ 4
+ 
+Gen*Ed Historical Perspectives(HS.SV)
+ 3
+ Gen*Ed Historical Perspective(HS.SV) or Social Science Survey(SS.SV)
+ 3
+ 
+Gen*Ed Cultural Diversity (CD) orGlobal Understanding (GU)
+ 3
+ Free Elective
+ 3
+ 
+Semester Credits
+ 15
+ Semester Credits
+ 17
+ 
+Second Year
+ 
+Fall
+ Credits
+ Spring
+ Credits
+ 
+CS-176& 176L
+ 4
+ CS-205& 205L
+ 4
+ 
+MA-125 Calculus with AnalyticGeometry I
+ 4
+ CS-286 Computer Architecture I
+ 3
+ 
+MA-130 Applied DiscreteMathematics
+ 3
+ MA-126 Calculus with AnalyticGeometry II
+ 4
+ 
+Gen*Ed Social Science Survey(SS.SV)
+ 3
+ EN-2xx Gen*Ed Literature (LIT)
+ 3
+ 
+Free Elective
+ 3
+  
+ 
+Semester Credits
+ 17
+ Semester Credits
+ 14
+ 
+Third Year
+ 
+Fall
+ Credits
+ Spring
+ Credits
+ 
+CS-305 Advanced Computing
+ 3
+ CS-438 Operating SystemsAnalysis
+ 3
+ 
+CS-310 Advanced Object-Oriented Programming andDesign
+ 3
+ CS-201 Introduction to ComputerProgramming for Data Science
+ 1
+ 
+CS-325 Software EngineeringConcepts
+ 3
+ CS-414 Computer Networks
+ 3
+ 
+Outside the Major Lab Science(Gen*Ed Natural Science (NS)BY,CE,PH)
+ 4
+ CS-2xx+ Computer ScienceElective
+ 3
+ 
+CS-432 Database Systems
+ 3
+ FO-xxx Gen*Ed World Lanaguage
+ 3
+ 
+ 
+ Outside Major Lab Science(Gen*Ed Natural Science (NS)BY,CE,PH)
+ 4
+ 
+Semester Credits
+ 16
+ Semester Credits
+ 17
+ 
+Fourth Year
+ 
+Fall
+ Credits
+ Spring
+ Credits
+ 
+CS-432 Database Systems
+ 3
+ CS-4xx Computer ScienceElective
+ 3
+ 
+CS-450 Cyber Security
+ 3
+ Outside the Major Math/ScienceRequirement (BY,CE,PH,MA) Seecurriculum chart
+ 3
+ 
+CS-492A Computer ScienceSenior Project A (Gen*EdReasoned Oral Discourse)
+ 3
+ PR-4xx Gen*Ed InterdisciplinaryPerspectives (ISP)
+ 3
+ 
+Free Elective (Gen*EdExperiential Education (EX)
+ 1
+ CS-492B Computer ScienceSenior Project B
+ 3
+ 
+Free Elective
+ 2
+  
+ 
+MA-220 Probability and StatisticsI
+ 3
+  
+ 
+Semester Credits
+ 15
+ Semester Credits
+ 12
+ 
+Total Credits 123
+ 
+
+
+
+
+
+
