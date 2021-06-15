@@ -1,0 +1,44 @@
+Course Syllabus
+CS 286 Computer Architecture I
+
+Credits:  3 
+
+Contact hours: 3
+
+Instructor’s or course coordinator’s name: Cui Yu
+
+Suggested textbook: Linda Null and Julia Lobur, The Essentials of Computer Organization and Architecture, Jones and Bartlett. 2011. 
+
+Catalogue Description:  
+Data representation and operations. Digital logic design. Processor data path. Memory hierarchy. Instruction set architecture. Assembly language programming.
+ 
+Prerequisites: CS 176, passed with a grade of C or higher
+ 
+Required or selected elective: Required
+
+Specific outcomes of instruction:
+By the end of the course, the students will
+* Be familiar with the basics of computer system organization and its relationship to fundamental logic components. 
+* Be able to perform basic arithmetic operations with signed integers represented in binary. 
+* Be able to analyze and design combinational systems using standard gates, minimization methods (such as Kmaps), and combinational modules (such as multiplexers and decoders). 
+* Be able to analyze and design simple sequential systems. 
+* Be able to explain hierarchical memory organization and how each level of memory contributes to system performance. 
+* Be able to write assembly language program.
+
+Relationship of course to student outcomes listed in outcome criterion:
+
+* Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program's discipline.
+
+
+Topics Covered
+* Introduction
+* Data Representation
+* Boolean Algebra 
+* Digital Logic (Combinational), K-Map
+* Digital Logic (Sequential)
+* Basic Computer Organization & Design (MARIE) 
+* Instruction Set Architecture (MARIE)
+* Assembly Programming
+* Memory Organization 
+* More on Instruction Set Architecture 
+

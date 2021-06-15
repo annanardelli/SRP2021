@@ -1,0 +1,28 @@
+CS 432 – Database Systems Syllabus
+
+Course Number and Name: CS432 Database Systems
+Credits: 3 
+Contact Hours: 3
+Instructor: Dr. Ling Zheng
+Textbooks:
+Database Systems: The Complete Book, 2nd Edition, by Hector Garcia-Molina, Jeffrey D. Ullman, and Jennifer Widom; Prentice Hall, 2009 (ISBN: 9780131873254)
+Fundamentals of Database Systems, 7th Edition, by Ramez Elmasri and Shamkant B. Navathe; Pearson, 2015 (ISBN: 9780133970777)
+Catalog Description: 
+Overview of database system concepts; data modeling; ER and UML diagrams; relational database schema definition; database design; query languages; introduction to NoSQL and comparison between relational and non-relational databases; hand-on experience of SQL, Oracle, and NoSQL. 
+Prerequisite:	
+CS-205, passed with a grade of C or higher.
+Course Type: Required course.
+Course Goals:
+After completing this course, students will be able to:
+* Comprehend the concepts of relational and non-relational database systems
+* Use SQL and NoSQL to manipulate a database 
+* Design databases using various models and write database applications 
+* Work in a team, learn cooperation, and practice the skill of presentations and writing
+Outcomes:
+* Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions
+* Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program’s discipline.
+Brief List of Topics:
+Database ConceptsData ModelsThe Entity-Relationship Model (ER)The Relational Model - Basic Definitions, Integrity Constraints, Update OperationsFormal Query Languages - Relational AlgebraMapping ER Model to Relational ModelStructured Query Language (SQL) - Data Definition and Simple QueriesSQL - More Complex Queries, Updates, Views, ConstraintsTriggersIntroduction to Non-relational DatabasesNon-relational Database Query
+1
+
+

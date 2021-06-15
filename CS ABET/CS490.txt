@@ -1,0 +1,54 @@
+Course Syllabus 
+CS 490 Senior Project 
+    
+Credits: 4
+Contact hours: 4
+
+Instructor’s or course coordinator’s name: Cui Yu
+
+Required textbook: N.A. 
+
+Course description:
+This course affords the student an opportunity to integrate topics and techniques from previous coursework in a capstone project.  The project will combine investigation into computer science literature and actual implementation, either in an area of current research or an application area of interest to industry.  Implementation might involve collaboration with other students.  The project will be presented formally both orally and in written form. This course satisfies the reasoned oral discourse requirement for computer science students.
+
+Prerequisites:  CS 325 (Software Eng. Concepts) and 432 (Databases). 
+
+Required or selected elective: Required
+
+Specific outcomes of instruction:
+By the end of the course, students will:
+* Be able to describe correctly and clearly at least one area of current computer science research or application area important in industry, and also techniques that may be appropriate for implementing solutions.
+* Have prepared and submitted a written plan, describing the problem and the intended project.
+* Have devised and submitted a project design for implementation.
+* Have carried out an implementation, on at least “proof of concept” level, accompanied with appropriate documentation.
+* Have made and presented an analysis of the capability and effectiveness of the implementation, including areas and kinds of shortcomings, and when feasible comparisons with other approaches.
+
+   Additionally students will be able to satisfy the following reasoned oral discourse objectives:
+* Will demonstrate the ability to orally present ideas and information in a reasoned and effective manner with attention to elements of vocal and nonverbal quality.
+* Will demonstrate the ability to evaluate multiple sources of information and synthesize this material in a reasoned oral presentation
+* Will demonstrate the ability to critically evaluate the style and substance of an oral presentation and pose appropriate questions
+* Will demonstrate the ability to respond to questions or challenges during a reasoned oral presentation in a group setting.
+
+Relationship of course to student outcomes listed in outcome criterion:
+
+* Communicate effectively in a variety of professional contexts
+* Function effectively as a member or leader of a team engaged in activities appropriate to the program's discipline
+
+
+Outline of course content and suggested schedule:
+
+Week 1/2:  Orientation, readings, problem discussions.
+Week 2/3:  Initial project proposal due. 
+Week 3/4: Literature Presentations.
+Week 4/5:  Project Design Due.
+Week 6/7/8/9:  Implementation and Informal progress reports.
+Week 10/11:  Implementation and Revised project design.
+Week 12:  Final Project presentations.
+Week 14:  Final code & documentation due.
+
+
+1
+
+
+
+

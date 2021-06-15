@@ -1,0 +1,55 @@
+Course Syllabus
+CS 176 - Introduction to Computer Science II
+
+Credits: 3									Contact hours: 3
+Instructor’s or course coordinator’s name: Dr. Ling Zheng
+Required Textbook and Other Materials:
+Cay Horstmann, Java Concepts: Early Objects, 8th Edition, 2015
+Course Description:
+Continuation in depth and breadth of problem-solving and algorithm development, using the same modern object-oriented language as in CS-175. More advanced, object-oriented design. Introduction to polymorphism and inheritance. 
+
+Prerequisite:	CS-175 and CS-175L, both passed with a grade of C or higher
+Corequisite: CS-176L
+Required or selected elective: Required
+
+Course Goals:
+
+After completing this course, students will be able to:
+    • Use arrays and array lists.
+    • Design and implement classes and methods.
+    • Understand and implement inheritance and polymorphism .
+    • Declare and use interfaces.
+    • Use Input/output streams, including text files.
+    • Handle exceptions.
+    • Understand and implement recursion.
+
+Relationship of course to student outcomes listed in criterion 3:
+
+In this course students are given an opportunity to:
+
+    • Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions.
+    • Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program's discipline.
+
+Topics Covered:
+
+Arrays
+   • Common array algorithms
+   • Two-dimensional arrays
+   • ArrayLists
+Designing Classes
+   • Constructors
+   • Static variables and methods
+   • Method overloads
+   • Packages
+Inheritance
+   • Superclasses and subclasses
+   • Constructor chaining
+   • Polymorphism
+Interfaces
+   • Abstract classes
+Input/Output
+   • File operations
+Exception Handling
+Recursion
+
+

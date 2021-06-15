@@ -1,0 +1,42 @@
+Course Syllabus
+CS 175L - Introduction to Computer Science I Lab
+
+Credits: 1									Contact hours: 1
+Instructor’s or course coordinator’s name: Gil Eckert
+Required Textbook and Other Materials:
+Cay Horstmann, Java Concepts: Early Objects, 8th Edition, 2015
+Course Description:
+Introductions to the basic concepts of programming and program development in a modern Software Development Environment with debugger and source code control. 
+
+Prerequisite:	CS-104 	Corequisite: CS-175
+Required or selected elective: Required
+
+Course Goals:
+
+After completing this course, students will be able to:
+    • Create simple classes, methods, and programs in an object-oriented language
+    • Correctly use and identify appropriate primitive data types
+    • Use selection and repetition control statements
+    • Create self-explanatory code through use of comments
+    • Utilize an Application Development Environment (ADE)
+    • Utilize an Application Programming Interface (API)
+    • Utilize a Debugger
+    • Utilize source code control and versioning
+
+Relationship of course to student outcomes listed in criterion 3:
+
+In this course students are given an opportunity to:
+    • Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions.
+    • Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program's discipline.
+
+Topics Covered:
+
+Introduction to Java, Eclipse
+Using Objects
+Implementing Classes
+Fundamental Data Types
+Decisions (If and selection)
+Iteration (Loops)
+Debugging
+Source code control and versioning (git)
+

@@ -1,0 +1,45 @@
+Course Syllabus
+CS 176L - Introduction to Computer Science II Lab
+
+Credits: 1									Contact hours: 1
+Instructor’s or course coordinator’s name: Gil Eckert
+Required Textbook and Other Materials:
+Cay Horstmann, Java Concepts: Early Objects, 8th Edition, 2015
+Course Description:
+Continuation in depth and breadth of problem solving and algorithm development, using the same modern object-oriented language as in CS 175. More advanced object-oriented design. Introduction to polymorphism, inheritance, and interfaces. All work will be done in a ‘hands on’ computer lab setting.
+
+Prerequisite:	Completion of CS175 and CS175L with a grade of C or better
+Corequisite: CS-176
+Required or selected elective: Required
+
+Course Goals:
+
+After completing this course, students will be able to:
+    • Create and use non-trivial classes and methods
+    • Work with arrays
+    • Write programs with interacting classes
+    • Use and understand inheritance in object-oriented applications
+    • Define, recognize and use polymorphism
+    • Utilize an Application Development Environment (ADE)
+    • Utilize an Application Programming Interface (API)
+    • Utilize a Debugger
+    • Utilize source code control and versioning
+
+Relationship of course to student outcomes listed in criterion 3:
+
+In this course students are given an opportunity to:
+
+    • Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions.
+    • Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program's discipline.
+
+Topics Covered:
+
+Arrays and ArrayLists
+Constructors
+Static Class Members
+Overloading Methods
+Inheritance
+Polymorphism and Interfaces
+File I/O
+Object-Oriented Design
+Recursion

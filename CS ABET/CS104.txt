@@ -1,0 +1,82 @@
+Course Syllabus
+CS-104 - Introduction to Problem Solving and Software Development
+
+Credits: 3									Contact hours: 3
+Instructor’s or course coordinator’s name: Gil Eckert
+Required Textbook and Other Materials:
+Title: Introduction to Problem Solving & Software Development. 
+An ebook designed specifically for Monmouth University students taking CS104 
+ISBN: 978-1-284-01330-6 	Price: $47.61 (you must enter promo code CS104DALE)	
+Published: 08/08/2019
+
+Course Description:
+Introduces a broad overview of problem solving, computing topics, fundamental concepts and methodologies of software development designed to provide students with awareness of the computing field's many aspects. Topics include fundamentals of computer architecture, operating systems, applications and, problem-solving.  It emphasizes the main phases of the software development lifecycle, such as requirements, design, implementation, testing, project planning. Assignments are completed using computing applications including spreadsheets, databases, and various programming platforms.  In addition, it stresses the difference between the software product and process. Introduces social and ethical issues related to computing and explores the local and global impact of computing on individuals, organizations and society. It also gives students their initial exposure to group project work in robotics culminating with a competition and presentation.
+Prerequisite(s): None
+	
+Required or selected elective: Required
+
+Specific outcomes of instruction:
+
+(2) Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program's discipline (ABET)
+
+(5) Function effectively as a member or leader of a team engaged in activities appropriate to the program's discipline (ABET)
+
+ (6) Apply computer science theory and software development fundamentals to produce computing-based solutions (Computer Science Department) 
+
+
+Relationship of course to student outcomes listed:
+
+In this course students are given an opportunity to:
+
+* Identify key technical developments and ideas in computing
+* Correctly evaluate simple logical (Boolean) expressions
+* List and describe the basic architectural units of a computer
+* Distinguish networks, the Internet, and the World Wide Web
+* Identify and work with various document and file formats
+* Identify, use, and distinguish several basic data types
+* Design an algorithm to solve a problem
+* Design a system to meet desired needs
+* Use version control to manage a software development project
+* Implement a software application using cloud computing services
+* Function as a member or leader of a group project 
+* Understand professional and ethical responsibility
+* Apply software engineering methodologies to class projects 
+* Understand the broad education necessary to assess the impact of engineering solutions in a global and societal context.
+
+Topics Covered:
+
+•	Computing Layers
+•	History of Computing Hardware and Software
+•	Generations of Computing
+•	Flowcharting concepts
+•	Familiarization with robots, setup, programming
+•	Environments (API,IDE)
+•	Programming Language Basics (Python)
+•	Syntax
+•	SE System Characteristics
+•	SE Requirements
+•	SE Profession and Ethics
+•	SE Principles
+•	SE Sprints
+•	Formal Problem Solving 
+•	Pseudocode 
+•	Algorithmic Development 
+•	Testing 
+•	Sorts 
+•	Searches 
+•	Repetition 
+•	Controlled Loops 
+•	Abstraction 
+•	Indexing
+•	Arrays/Lists 
+•	Records 
+•	Boolean Logic
+•	Stacks 
+•	Queues
+•	Trees 
+•	Subprograms/Functions 
+•	Parameters 
+•	Compilers vs Interpreters 
+•	Language Functionality 
+•	Procedural vs OO languages 
+•	Spreadsheets

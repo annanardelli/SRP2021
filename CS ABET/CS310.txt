@@ -1,0 +1,29 @@
+CS 310 – Advanced Object-Oriented Programming and Design Syllabus
+
+Course Number and Name: CS 310 Advanced Object-Oriented Programming and Design
+Credits: 3 
+Contact Hours: 3
+Instructor: Dr. Ling Zheng
+Textbooks: 
+Y. Daniel Liang, Introduction to Programming with C++, 3rd Edition, Pearson, 2014.
+Stanley B. Lippman, Josée Lajoie, and Barbara E. Moo. C++ Primer, 5th Edition, Addison-Wesley Professional, 2012.
+Catalog Description: 
+Object-oriented programming and design, using a language different from that used on CS 176. Use of classes, inheritance, polymorphism, and libraries. Topics will include flexible system design for such requirements as globalization. This is a writing-intensive course. 
+Prerequisite:	
+CS-205 passed with a grade of C or higher and EN-101 and EN-102 or with permission of instructor.
+Course Type: Required course.
+Course Goals:
+After completing this course, students will be able to:
+* Understand, write, and maintain programs in a second object-oriented programming language
+* Partition moderate-sized problems into cooperating classes 
+* Implement designs using user-defined and library classes
+* Document both designs and implementations in a clear fashion
+* Demonstrate an ability to analyze the local and global impact of computing on individuals, organizations, and society.
+Outcomes:
+* Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions
+* Communicate effectively in a variety of professional contexts
+Brief List of Topics:
+Variables and Data TypesConstants, OperatorsBasic Input & OutputControl StructureFunctionsArraysPointersDynamic Memory ManagementStructuresClassesStringsFriendsInheritancePolymorphismFile I/OTemplatesVectors
+1
+
+

@@ -1,0 +1,60 @@
+Course Syllabus
+SE 418 – Software Project Management
+
+Credits: 3									Contact hours: 3
+Instructor’s or course coordinator’s name: Dr. Bahman Khosravi-Sichani
+Required Textbook and Other Materials:
+Kerzner, Harold, D. Project Management: A Systems Approach to Planning, Scheduling, and Controlling, 12th Edition, John Wiley, and Sons, 2017. ISBN: 978-1119165354
+Kerzner, Harold, D. Project Management Case Studies, John Wiley, and Sons. 2017, 5th Edition ISBN: 978-1119385974 
+Course Description:
+This course and techniques covered in it, with a focus on their application to the management of software projects, will utilize projects from multiple industries not limited to software development or hardware deployment projects for the student to see the functionality of Project Management across multiple industries. 
+Prerequisite(s): CS-176; EN-101 and EN-102 or permission of the instructor.
+	
+Required or selected elective: Required
+
+Specific outcomes of instruction:
+
+When students complete this course they should be able to:
+
+* Demonstrate that they have a thorough understanding of the activities involved in managing a software project
+
+* Be able to plan a project schedule and estimate the cost. 
+
+* Determine project’s critical path and precedence activities
+
+* Produce deliverable documentation to be reviewed and baselined by the project’s stakeholders. 
+
+* Be able to assess and mitigate risks during the course of a software project implementation
+
+Relationship of course to student outcomes listed in criterion 3:
+
+In this course students are given an opportunity to:
+
+* Apply knowledge of computing and mathematics appropriate to the discipline.
+
+* Function effectively on teams to accomplish a goal.
+
+* Communicate effectively with a range of audiences.
+
+* Use current techniques, skills and tools necessary for practice.
+
+* Apply design and development principles in the construction of software systems of varying complexity.
+
+Topics Covered:
+
+* Principals of Project Management
+
+* Project Planning and Scheduling
+
+* Project Cost Estimation Methodologies
+
+* Management Functions
+
+* Cost Control and Risk Management
+
+* Contracts and Quality Management
+
+* Project Management Office
+
+
+

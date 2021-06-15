@@ -1,0 +1,158 @@
+                                                         Course Syllabus
+CS – 205L Data Structure and Algorithms Lab
+
+Credits: 1								Contact hours: 3
+
+Instructor or Course Coordinator: Jiacun Wang
+
+Textbook(s):
+
+M. Goodrich, R. Tamassia and M. Goldwasser, Data Structures and Algorithms in Java (6th edition), Wiley, 2014.
+
+Course description: 
+
+Introduction to the design, implementation, and use of elementary data types (list, stack, queue, binary tree); algorithms for sorting and searching; and informal complexity analysis. All work will be done in a ‘hands on’ computer lab setting.
+
+Prerequisite(s): 
+MA-130, CS-176 and CS-176L, all passed with a grade of C or higher. Corequisite: CS-205.
+
+Specific outcomes of instruction:
+
+When students complete this course they should be able to:
+
+* Identify a class of solutions (algorithms) given a problem
+
+* Create data structures on their own (not using libraries)
+
+* Design algorithms to correctly solve problems which need these data structures for their solutions
+
+* Analyze the complexity of algorithms and how using various data structures will change the complexity of the algorithms
+
+* Use Java Collections in the context of this course
+
+Relationship of course to student outcomes listed in criterion 3: 
+
+This course gives students an opportunity to develop:
+* Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program's discipline. (Learning Outcome 2)
+
+Topics covered:
+   
+* Arrays and searching
+* Binary search and recursion
+* Sorting and recursion
+* Linked lists
+* Stacks, queues, and dequeues
+* Heaps and priority queues
+* Object-oriented programming and Java container classes
+* Advanced sorting (Quicksort, Mergesort, Shellsort)
+* Linear-time sorting (Counting Sort, Radix Sort)
+* Recursion and trees
+* Sorted containers: sets and multisets 
+* Hash tables
+* Binary trees
+* HashMap versus TreeMap
+* Trees and tree traversal
+
+
+Course Syllabus
+SE 306 – Formal Methods in Software Engineering
+
+Credits: 3 								Contact hours: 3							
+Course instructor or coordinator : Jiacun Wang
+
+Textbook(s) :
+
+Jiacun Wang and William Tepfenhart, Formal Methods in Computer Science, CRC Press, 2019.
+
+Course Description :
+
+Covers a variety of formal methods and applies them to software-specification development. Assumes a firm grounding in mathematical logic, knowledge of proof techniques, and skill in the translation of problems expressed in English into predicate logic. 
+
+Prerequisites: MA 120 or MA 130.
+
+Required or Selected elective: Required
+
+Specific outcomes of instruction:
+
+After completing this course students will:
+
+* Be able to describe the meaning of formal methods and the context in which they are useful
+
+* Be able to verify that software meets the formally specified requirements
+
+* Understand how mathematics can be applied directly to the development of software
+ 
+Relationship of course to student outcomes listed in criterion 3:
+
+This course assists students in achieving the following program outcomes: 
+
+1. an ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics
+2. an ability to apply engineering design to produce solutions that meet specified needs with consideration of public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors
+3. an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions
+4. an ability to acquire and apply new knowledge as needed, using appropriate learning strategies.
+
+Topics covered:
+
+* Introduction to formal methods 
+* Sets and functions
+* Finite state machines
+* Propositional logic
+* Temporal logic
+* Model verification
+* NuSMV
+* Petri nets
+* Timed Petri nets
+
+
+
+
+
+SE 357/517 –Engineering Web Based Systems
+
+Credits: 3 								Contact hours: 3	
+Instructor or Course Coordinator: Jiacun Wang
+Suggested Reading Material:
+Latty Ullman, PHP and MySQL for dynamic web sites, 4th edition, Peachpit Press, ISBN: 978 0 321 78407 0
+Course description:
+A practical introduction to the principles, methods and tools required to create high-quality software applications for the distributed, client-server context of the Web. Emphasis is on architectural designs, and language and data access methods that are common in web-based systems. Notice that we will be writing programs to build our web applications rather than using any software package that is already on the market.
+
+Prerequisites: SE205, SE207.
+
+Required or Selected elective: Required
+
+Student Outcomes
+* Students will be able to design a solution to a web application.
+* Students will be able to design an effective and efficient database for a data-driven web application.
+* Students will be able to programming a web system using HTML, CSS, PHP, MySQL, Java Script, etc.
+* Students will be able to address some fundamental security issues of web applications, such as access control, session control, and critical data encryption, etc. 
+
+Relationship of course to student outcomes listed in criterion 3:
+
+This course assists students in achieving the following program outcomes: 
+
+1. an ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics
+2. an ability to apply engineering design to produce solutions that meet specified needs with consideration of public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors
+3. an ability to communicate effectively with a range of audiences
+4. an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions
+5. an ability to acquire and apply new knowledge as needed, using appropriate learning strategies.
+
+Topics covered
+* HTML
+* CSS
+* PHP variables, strings, control structures, arrays
+* PHP form processing, regular expression matching
+* MySQL database 
+* Using PHP with MySQL, data storing and retrieving
+* Common Web programming techniques
+* Web engineering and application development
+* Cookies and sessions
+* Web security
+* Java script
+* Node.js
+
+
+Appendix A - 1
+
+
+
+

@@ -1,0 +1,46 @@
+Course Syllabus
+CS 414 – Computer Networks
+
+Credits: 3									Contact hours: 3
+Instructor’s or course coordinator’s name: Dr. Bahman Khosravi-Sichani
+Required Textbook and Other Materials:
+Jim Kurose and Keith Ross,”Computer Networking – A Top-Down Approach”, Addison-Wesley, Sixth/Seventh Edition, 2013/2017
+
+Course Description:
+An introductory-level course on the hierarchy of networking software and hardware. Emphasis on the description of protocols in the Internet, specifically, client-server Application Layer Protocols such as HTTP, SMTP, DNS, DHCP; Transport Layer Protocols such as UDP/TCP, Network Layer Protocols such as IP, ICMP, as well as Network Layer Routing and Forwarding techniques, such as RIP and OSPF for IPv4 and Tunneling for IPv6, and Link layer structures and protocols
+
+Prerequisite(s): CS-286 passed with a grade of C or higher 
+	
+Required or selected elective: Required
+
+Specific outcomes of instruction:
+
+When students complete this course they should be able to:
+
+* Demonstrate that they have a thorough understanding the layering infrastructure of the Internet
+
+* Understand a sample set of protocols in each of the internet layers
+
+* Understand the high level issues about internet’s security, performance, and administration
+
+* Understand internet architectural designs for DNS record resolution, proxy servers, VPNs, SDN, and cloud implementation
+
+Relationship of course to student outcomes listed in criterion 3:
+
+In this course students are given an opportunity to:
+
+* Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions
+* Communicate effectively in a variety of professional contexts
+* Recognize professional responsibilities and make informed judgements in computing practice based on legal and ethical principles
+
+
+Topics Covered:
+
+* .Overview of Data Communication Networking and Protocols
+* Application Layer; Network Computing; Client-Server Protocol Examples; Peer-Peer Protocol Examples
+* Transport Layer; Different Networks’ Transport Layer Functionalities; UDP/TCP
+* Routing Algorithms and IP protocol
+* Link Layer Protocols; Wired and Wireless Ethernet
+* Introduction to performance, reliability and security topics
+
+

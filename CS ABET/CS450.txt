@@ -1,0 +1,44 @@
+SYLLABUS
+CS 450 01 - Cyber Security
+SE 450 01 - Cyber Security
+	
+
+Instructor: Dr. Samer Khamaiseh
+
+Credits: 3 (Elective)
+
+Course Prerequisite:  CS-75 50 Introduction to Computer Science I, CS-501A 50 Comp Prog Essential. 
+
+Textbook and Materials
+
+1. Computer Security Principles and practice by Lawrie Brown and William Stallings 3rd or 4th edition 
+2. Course Slides 
+3. Selected Research Papers.
+
+Catalog Description:  Study of the fundamental security design and principles of the software systems and networks. During this class, the students will be exposed to the up-to-date security fundamentals including defining the security threats and the possible countermeasure methods.   
+
+General Objectives
+
+1) To familiarize students with the cybersecurity principles of computer networks and software systems 
+2) To learn fundamental principles of developing, protecting, and securing the today software systems and networks
+
+
+Specific Outcomes: Upon completion of the course students should be able:
+1) to learn how to identify the source of the security threats for both network and software systems
+2) Function effectively on teams to accomplish a goal.
+3) to understand how to detect security threats using different detection techniques
+4) to learn how to countermeasure the security threats for both software applications and networks
+5) Use current techniques, skills and tools necessary for practice.
+6) Analyze a problem, identify and define its computing requirements
+7) to understand the simple techniques of hacking 
+8) to be able to design secure applications and systems
+
+
+
+
+
+Cybersecurity course Topics
+
+Chapter Number and NameChapter 1: Cybersecurity concepts Chapter 3: User AuthenticationChapter 4: Access ControlChapter 11: Software SecurityChapter 6: Malicious SoftwareChapter 7: Denial of service attacksChapter 5: Database and cloud securityChapter 8: Intrusion detection Chapter 2: Cryptographic toolsChapter 20: Symmetric encryption and message confidentiality Chapter 21: Public Key approaches Chapter 16: Physical and Infrastructure security 
+
+
