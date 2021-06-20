@@ -1,65 +1,106 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[45]:
+# In[52]:
 
 
-import PyPDF2
 import pickle
-
 from nltk.tokenize import word_tokenize
-
 import nltk
 from nltk.corpus import stopwords
+import requests
+import re
+import string
 
 
-file = open("/Users/isabellachiaravalloti/Downloads/CS104ABETSyllabus.pdf","rb")
-fileReader = PyPDF2.PdfFileReader(file)
-#print(fileReader.numPages)
-#print(fileReader.getDocumentInfo())
 
-#url = "https://drive.google.com/file/d/1XWOX5YjK2PZo5LjiphYVJEQyBC5BIERj/view?usp=sharing"
+#CURRICULUM CHART
+#gets list of courses from curriculum chart
+ccURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CurriculumChart/b-s-in-computer-science-3.txt"
+ccPage = requests.get(ccURL)
+ccData = ccPage.text
+
+#searches for courses in data
+ccSubstr = re.compile('CS-\d{3}\w{0,1}')
+courses = ccSubstr.findall(ccData)
+
+#edits courses in list
+courseList = []
+for c in courses:
+    if c not in courseList:
+        courseList.append(c)
+addCourses = ["CS-102", "CS-418", "CS-490", "CS-492AB"]
+delCourses = ["CS-201", "CS-212", "CS-222", "CS-288", "CS-289", "CS-302", "CS-312", "CS-316", "CS-320", "CS-322", "CS-330", "CS-388", "CS-389", "CS-488", "CS-489", "CS-492A", "CS-492B", "CS-438"]
+courseList.extend(addCourses)
+courseList = [c for c in courseList if c not in delCourses]
+courseList.sort()
+print(courseList)
+urlList = [l.replace('-','') for l in courseList]
+print(urlList)
 
 
-numPages = fileReader.numPages
-pageList = []
 
+#SYLLABUS
+for u in urlList:
+    sylURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CS%20ABET/" + u + ".txt"
+    sylPage = requests.get(sylURL)
+    sylData = sylPage.text
 
-for page in range(0, numPages):
-    pageObj = fileReader.getPage(page)
-    text = pageObj.extractText()
-    tokens = word_tokenize(text)
-    # convert to lower case
+    if "\n" in sylData:
+        sylData = sylData.replace("\r", "")
+    else:
+        sylData = sylData.replace("\r", "\n")
+
+    tokens = word_tokenize(sylData) 
+    #convert to lower case
     tokens = [w.lower() for w in tokens]
-    # remove punctuation from each word
-    import string
+    #remove punctuation from each word
     table = str.maketrans('', '', string.punctuation)
     stripped = [w.translate(table) for w in tokens]
-    # remove remaining tokens that are not alphabetic
+    #remove remaining tokens that are not alphabetic
     words = [word for word in stripped if word.isalpha()]
-    # filter out stop words
+    #filter out stop words
     stop_words = set(stopwords.words('english'))
     new_stopwords = ['ł']
     new_stopwords_list = stop_words.union(new_stopwords)
     words = [w for w in words if not w in new_stopwords_list]
-    pageList.append(words)
+    print()
+    print(u)
+    print(words)
+    
+    file_name = u + "Syllabus.txt"
+
+    open_file = open(file_name, "wb")
+    pickle.dump(words, open_file)
+    open_file.close()
+
+    open_file = open(file_name, "rb")
+    loaded_list = pickle.load(open_file)
+    open_file.close()
+
+    #print(loaded_list)
+
 
     
-print(pageList)
+#COURSE CATALOG
+print()
+cataURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/UndergraduateCourseCatalog.txt"
+cataPage = requests.get(cataURL)
+cataData = cataPage.text
+
+substrCSSE = re.compile('(lzheng@monmouth.edu)([\S\s]*)(B.A. in Computer Science\n\nB.A. in Computer Science)')
+listCSSE = substrCSSE.findall(cataData)
+textCSSE = " ".join(str(x) for x in listCSSE)
+
+
+descFind = re.compile('(CS-\d{3}\w{0,1})([\S\s]*)(?=CS-\d{3}\w{0,1})')
+descAll = cataSubstr.findall(textCSSE)
+print(descAll)
+
+
 
     
-file_name = "sample.txt"
-
-open_file = open(file_name, "wb")
-pickle.dump(pageList, open_file)
-open_file.close()
-
-open_file = open(file_name, "rb")
-loaded_list = pickle.load(open_file)
-open_file.close()
-
-#print(loaded_list)
-
+"""
 
 #pip install wordcloud
 import matplotlib.pyplot as plt
@@ -76,9 +117,16 @@ def plot_cloud(wordcloud):
 # Import package
 from wordcloud import WordCloud, STOPWORDS
 # Generate word cloud
-wordcloud = WordCloud(width = 3000, height = 2000, random_state=1, background_color='salmon', colormap='Pastel1', collocations=False, stopwords = STOPWORDS).generate(text)
+wordcloud = WordCloud(width = 3000, height = 2000, random_state=1, background_color='white', colormap='Accent', collocations=False, stopwords = STOPWORDS).generate(syllabusData)
 # Plot
 plot_cloud(wordcloud)
+
+
+"""
+
+
+# In[ ]:
+
 
 
 
