@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+import requests
+import re
+
+ccURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CurriculumChart/b-s-in-computer-science-3.txt"
+ccPage = requests.get(ccURL)
+ccData = ccPage.text
+
+substring = "CS-104"
+position = re.finditer(substring, ccData)
+matches_positions = [match.start() for match in position]
+ 
+#position1 = re.finditer("Credits:", ccData)
+
+print(matches_positions)
+# search = True
+# while search:
+#     for x in position:
+#         for y in position1:
+#             if ccData.find(y) == ccData.find(x) +1:
+#                 y = y+1
+#                 cs104 = ccData[position[x]: position[y]]
+#                 print(cs104)
