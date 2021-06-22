@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[4]:
 
 
 import pickle
@@ -43,7 +43,7 @@ courseList = ['CS-102', 'CS-104', 'CS-175', 'CS-175L', 'CS-176', 'CS-176L', 'CS-
 urlList = [l.replace('-','') for l in courseList]
 
 
-"""
+
 
 #SYLLABUS
 for u in urlList:
@@ -85,7 +85,24 @@ for u in urlList:
 
     #print(loaded_list)
 
-"""
+
+
+def descSplit(desc):
+    descText = " ".join(desc)
+    tokens = word_tokenize(descText) 
+    #convert to lower case
+    tokens = [w.lower() for w in tokens]
+    #remove punctuation from each word
+    table = str.maketrans('', '', string.punctuation)
+    stripped = [w.translate(table) for w in tokens]
+    #remove remaining tokens that are not alphabetic
+    words = [word for word in stripped if word.isalpha()]
+    #filter out stop words
+    stop_words = set(stopwords.words('english'))
+    new_stopwords = ['ł']
+    new_stopwords_list = stop_words.union(new_stopwords)
+    words = [w for w in words if not w in new_stopwords_list]
+    print(words)
 
 
 def desc(cc, start):
@@ -96,8 +113,8 @@ def desc(cc, start):
     while not cc[start].startswith("CS-"):
         desc.append(cc[start])
         start += 1
-    print(desc)
-    print()   
+    descSplit(desc)
+    
     
     
 #COURSE CATALOG
