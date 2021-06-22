@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # In[4]:
 
 
@@ -13,17 +10,16 @@ import re
 import string
 
 
+
 """
 #CURRICULUM CHART
 #gets list of courses from curriculum chart
 ccURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CurriculumChart/b-s-in-computer-science-3.txt"
 ccPage = requests.get(ccURL)
 ccData = ccPage.text
-
 #searches for courses in data
 ccSubstr = re.compile('CS-\d{3}\w{0,1}')
 courses = ccSubstr.findall(ccData)
-
 #edits courses in list
 courseList = []
 for c in courses:
@@ -43,14 +39,24 @@ courseList = ['CS-102', 'CS-104', 'CS-175', 'CS-175L', 'CS-176', 'CS-176L', 'CS-
 urlList = [l.replace('-','') for l in courseList]
 
 
+nltk.download("stopwords")
 
+def freqCount(array):
+    d = {}
+    for word in array: 
+         d[word] = d.get(word, 0) + 1
+    word_freq = []
+    for key, value in d.items():
+        word_freq.append((value, key))     
+    word_freq.sort(reverse=True) 
+    print(word_freq)
 
 #SYLLABUS
 for u in urlList:
     sylURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CS%20ABET/" + u + ".txt"
     sylPage = requests.get(sylURL)
     sylData = sylPage.text
-
+    
     if "\n" in sylData:
         sylData = sylData.replace("\r", "")
     else:
@@ -82,7 +88,8 @@ for u in urlList:
     open_file = open(file_name, "rb")
     loaded_list = pickle.load(open_file)
     open_file.close()
-
+    
+    freqCount(words)
     #print(loaded_list)
 
 
@@ -126,15 +133,12 @@ cataData = cataData.splitlines()
 
 
 course = 0
-for index, item in enumerate(cataData):
-    #print(index, item)
-    if item.startswith(courseList[course]):
-        if "Credits: " in cataData[index + 1]:
-            desc(cataData, index) 
-        course += 1
-
-           
-
+# for index, item in enumerate(cataData):
+#     #print(index, item)
+#     if item.startswith(courseList[course]):
+#         if "Credits: " in cataData[index + 1]:
+#             desc(cataData, index) 
+#         course += 1
 
 
 
@@ -144,7 +148,6 @@ for index, item in enumerate(cataData):
 #pip install wordcloud
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
-
 # Define a function to plot word cloud
 def plot_cloud(wordcloud):
     # Set figure size
@@ -159,10 +162,8 @@ from wordcloud import WordCloud, STOPWORDS
 wordcloud = WordCloud(width = 3000, height = 2000, random_state=1, background_color='white', colormap='Accent', collocations=False, stopwords = STOPWORDS).generate(syllabusData)
 # Plot
 plot_cloud(wordcloud)
-
 """
 
-
 # In[ ]:
 
 
@@ -176,7 +177,3 @@ plot_cloud(wordcloud)
 
 
 # In[ ]:
-
-
-
-
