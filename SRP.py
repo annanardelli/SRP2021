@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[52]:
+# In[2]:
 
 
 import pickle
@@ -13,7 +13,7 @@ import re
 import string
 
 
-
+"""
 #CURRICULUM CHART
 #gets list of courses from curriculum chart
 ccURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CurriculumChart/b-s-in-computer-science-3.txt"
@@ -29,16 +29,21 @@ courseList = []
 for c in courses:
     if c not in courseList:
         courseList.append(c)
-addCourses = ["CS-102", "CS-418", "CS-490", "CS-492AB"]
-delCourses = ["CS-201", "CS-212", "CS-222", "CS-288", "CS-289", "CS-302", "CS-312", "CS-316", "CS-320", "CS-322", "CS-330", "CS-388", "CS-389", "CS-488", "CS-489", "CS-492A", "CS-492B", "CS-438"]
+addCourses = ["CS-102", "CS-418", "CS-490"]
+delCourses = ["CS-201", "CS-212", "CS-222", "CS-288", "CS-289", "CS-302", "CS-312", "CS-316", "CS-320", "CS-322", "CS-330", "CS-388", "CS-389", "CS-488", "CS-489", "CS-438"]
 courseList.extend(addCourses)
 courseList = [c for c in courseList if c not in delCourses]
 courseList.sort()
 print(courseList)
 urlList = [l.replace('-','') for l in courseList]
-print(urlList)
+#print(urlList)
+"""
+
+courseList = ['CS-102', 'CS-104', 'CS-175', 'CS-175L', 'CS-176', 'CS-176L', 'CS-205', 'CS-205L', 'CS-286', 'CS-305', 'CS-310', 'CS-325', 'CS-414', 'CS-418', 'CS-432', 'CS-450', 'CS-490', 'CS-492A', 'CS-492B']
+urlList = [l.replace('-','') for l in courseList]
 
 
+"""
 
 #SYLLABUS
 for u in urlList:
@@ -80,28 +85,45 @@ for u in urlList:
 
     #print(loaded_list)
 
+"""
 
+
+def desc(cc, start):
+    desc = []
+    desc.append(cc[start])
+    desc.append(cc[start + 1])
+    start += 2
+    while not cc[start].startswith("CS-"):
+        desc.append(cc[start])
+        start += 1
+    print(desc)
+    print()   
+    
     
 #COURSE CATALOG
 print()
 cataURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/UndergraduateCourseCatalog.txt"
 cataPage = requests.get(cataURL)
 cataData = cataPage.text
-
-substrCSSE = re.compile('(lzheng@monmouth.edu)([\S\s]*)(B.A. in Computer Science\n\nB.A. in Computer Science)')
-listCSSE = substrCSSE.findall(cataData)
-textCSSE = " ".join(str(x) for x in listCSSE)
+cataData = cataData.splitlines()
 
 
-descFind = re.compile('(CS-\d{3}\w{0,1})([\S\s]*)(?=CS-\d{3}\w{0,1})')
-descAll = cataSubstr.findall(textCSSE)
-print(descAll)
+course = 0
+for index, item in enumerate(cataData):
+    #print(index, item)
+    if item.startswith(courseList[course]):
+        if "Credits: " in cataData[index + 1]:
+            desc(cataData, index) 
+        course += 1
+
+           
 
 
 
-    
+
+
 """
-
+    
 #pip install wordcloud
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
@@ -120,7 +142,6 @@ from wordcloud import WordCloud, STOPWORDS
 wordcloud = WordCloud(width = 3000, height = 2000, random_state=1, background_color='white', colormap='Accent', collocations=False, stopwords = STOPWORDS).generate(syllabusData)
 # Plot
 plot_cloud(wordcloud)
-
 
 """
 
