@@ -6,24 +6,32 @@ This is a temporary script file.
 """
 
 import requests
-import re
 
-ccURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CurriculumChart/b-s-in-computer-science-3.txt"
+ccURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/UndergraduateCourseCatalog.txt"
 ccPage = requests.get(ccURL)
 ccData = ccPage.text
+ccData = ccData.splitlines()
+courseList = ['CS-102', 'CS-104', 'CS-175', 'CS-175L', 'CS-176', 'CS-176L',
+              'CS-205', 'CS-205L', 'CS-286', 'CS-305', 'CS-310', 'CS-325',
+              'CS-414', 'CS-418', 'CS-432', 'CS-450', 'CS-490', 'CS-492AB']
+substring2 = "Credits:"
 
-substring = "CS-104"
-position = re.finditer(substring, ccData)
-matches_positions = [match.start() for match in position]
- 
-#position1 = re.finditer("Credits:", ccData)
 
-print(matches_positions)
-# search = True
-# while search:
-#     for x in position:
-#         for y in position1:
-#             if ccData.find(y) == ccData.find(x) +1:
-#                 y = y+1
-#                 cs104 = ccData[position[x]: position[y]]
-#                 print(cs104)
+
+def output (course):
+    count = -1
+    for line in ccData:
+        count = count+1
+        count2 = count
+        if course in line:
+            if substring2 in ccData[count +1]:
+                ccRange = ccData[count+2:]
+                for lines in ccRange:
+                    count2 = count2+1
+                    if substring2 in lines:
+                        continue
+                cs104 = ccData[count:count2]
+                print (cs104)
+                
+for c in courseList:
+    result = output(c)   
