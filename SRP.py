@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[130]:
+# In[164]:
 
 
 import pickle
@@ -15,26 +15,42 @@ import string
 import matplotlib.pyplot as plt
 from nltk import FreqDist
 import pandas as pd
+from collections import Counter
  
 
 
 def wordFrequency(syl, cc):
     data = []
+    syllabus = []
+    catalog = []
     for word in cc:
         if word in syl:
             data.append(word)
-    syllabus = []
-    catalog = []
     for word in syl:
         if word in data:
-            syllabus.append(word)   
+            syllabus.append(word)     
     for word in cc:
         if word in data:
             catalog.append(word)
-    d = pd.DataFrame()
-    #d.index = [data]
+    seriesSyl = pd.Series(syllabus)
+    seriesCC = pd.Series(catalog)
+    syllabusCount = seriesSyl.value_counts().sort_index()
+    catalogCount = seriesCC.value_counts().sort_index()
+    print(syllabusCount)
+    print(catalogCount)
+    #print(seriesSyl.value_counts().sort_index())
+    #print(seriesCC.value_counts().sort_index())
     
-    print(d)
+    print()
+    print()
+    
+    plt.figure(figsize=(12,8))
+    plt.plot(syllabusCount)
+    plt.plot(catalogCount)
+    plt.xticks(rotation=90)
+
+    #display plot
+    plt.show()
     
 
 
@@ -201,7 +217,13 @@ plot_cloud(wordcloud)
 #freqDist.plot(30)
 
 
-
+#syllabus.sort()
+    #catalog.sort()
+    #d = pd.DataFrame(syllabus, columns = ['Syllabus'])
+    
+    #print(count)
+    
+    #series = d.squeeze()
 
 """
 
