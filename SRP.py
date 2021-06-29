@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[11]:
+# In[130]:
 
 
 import pickle
@@ -16,44 +16,26 @@ import matplotlib.pyplot as plt
 from nltk import FreqDist
 import pandas as pd
  
- 
 
 
-
-"""
-#CURRICULUM CHART
-#gets list of courses from curriculum chart
-ccURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CurriculumChart/b-s-in-computer-science-3.txt"
-ccPage = requests.get(ccURL)
-ccData = ccPage.text
-
-#searches for courses in data
-ccSubstr = re.compile('CS-\d{3}\w{0,1}')
-courses = ccSubstr.findall(ccData)
-
-#edits courses in list
-courseList = []
-for c in courses:
-    if c not in courseList:
-        courseList.append(c)
-addCourses = ["CS-102", "CS-418", "CS-490"]
-delCourses = ["CS-201", "CS-212", "CS-222", "CS-288", "CS-289", "CS-302", "CS-312", "CS-316", "CS-320", "CS-322", "CS-330", "CS-388", "CS-389", "CS-488", "CS-489", "CS-438"]
-courseList.extend(addCourses)
-courseList = [c for c in courseList if c not in delCourses]
-courseList.sort()
-print(courseList)
-urlList = [l.replace('-','') for l in courseList]
-#print(urlList)
-"""
-
-
-
-def wordFrequency(text):
-    freqDist = FreqDist(text)
-    print(freqDist) 
-    freqDist.plot(30)
-    data = pd.Series(text)
-    print(data.value_counts())
+def wordFrequency(syl, cc):
+    data = []
+    for word in cc:
+        if word in syl:
+            data.append(word)
+    syllabus = []
+    catalog = []
+    for word in syl:
+        if word in data:
+            syllabus.append(word)   
+    for word in cc:
+        if word in data:
+            catalog.append(word)
+    d = pd.DataFrame()
+    #d.index = [data]
+    
+    print(d)
+    
 
 
 def descSplit(desc):
@@ -71,8 +53,8 @@ def descSplit(desc):
     new_stopwords = ['ł']
     new_stopwords_list = stop_words.union(new_stopwords)
     words = [w for w in words if not w in new_stopwords_list]
-    print(words)
-    wordFrequency(words)
+    return words
+    
 
 
 def desc(cc, start):
@@ -83,15 +65,14 @@ def desc(cc, start):
     while not cc[start].startswith("CS-"):
         desc.append(cc[start])
         start += 1
-    descSplit(desc)
+    desc = descSplit(desc)
+    return desc
 
 
 
 
-
-coursesSyl = ['CS-102', 'CS-104', 'CS-175', 'CS-175L', 'CS-176', 'CS-176L', 'CS-205', 'CS-205L', 'CS-286', 'CS-305', 'CS-310', 'CS-325', 'CS-414', 'CS-418', 'CS-432', 'CS-450', 'CS-490', 'CS-492AB']
-coursesCatalog = ['CS-102', 'CS-104', 'CS-175', 'CS-175L', 'CS-176', 'CS-176L', 'CS-205', 'CS-205L', 'CS-286', 'CS-305', 'CS-310', 'CS-325', 'CS-414', 'CS-418', 'CS-432', 'CS-450', 'CS-490', 'CS-492A', 'CS-492B']
-urlList = [l.replace('-','') for l in coursesSyl]
+courses = ['CS-102', 'CS-104', 'CS-175', 'CS-175L', 'CS-176', 'CS-176L', 'CS-205', 'CS-205L', 'CS-286', 'CS-305', 'CS-310', 'CS-325', 'CS-414', 'CS-418', 'CS-432', 'CS-450', 'CS-490', 'CS-492A']
+urlList = [l.replace('-','') for l in courses]
 
 
 
@@ -121,12 +102,11 @@ for u in urlList:
     new_stopwords = ['ł']
     new_stopwords_list = stop_words.union(new_stopwords)
     words = [w for w in words if not w in new_stopwords_list]
-    print()
-    print(u)
-    print(words)
+    #print()
+    #print(u)
+    #print(words)
     sylList.append(words)
     
-    wordFrequency(words)
     
     file_name = u + "Syllabus.txt"
 
@@ -141,12 +121,6 @@ for u in urlList:
     #print(loaded_list)
 
 
-    
-    
-
-    
-    
-    
 #COURSE CATALOG
 print()
 cataURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/UndergraduateCourseCatalog.txt"
@@ -155,24 +129,57 @@ cataData = cataPage.text
 cataData = cataData.splitlines()
 
 
-course = 0
 descList = []
+course = 0
 for index, item in enumerate(cataData):
     #print(index, item)
-    if item.startswith(coursesCatalog[course]):
-        if "Credits: " in cataData[index + 1]:
+    if item.startswith(courses[course]):
+        if ("Credits: " in cataData[index + 1]) or ("Credits: " in cataData[index]):
             descList.append(desc(cataData, index)) 
-        if course < (len(coursesCatalog) - 2):
+        if course < (len(courses) - 2):
             course += 1
 
-           
+        
+
+courseLength = len(courses)
+for i in range(courseLength):
+    wordFrequency(sylList[i],descList[i])
 
 
-"""
     
+
+    
+    
+    
+    
+    
+
+        
+"""
+#CURRICULUM CHART
+#gets list of courses from curriculum chart
+ccURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CurriculumChart/b-s-in-computer-science-3.txt"
+ccPage = requests.get(ccURL)
+ccData = ccPage.text
+#searches for courses in data
+ccSubstr = re.compile('CS-\d{3}\w{0,1}')
+courses = ccSubstr.findall(ccData)
+#edits courses in list
+courseList = []
+for c in courses:
+    if c not in courseList:
+        courseList.append(c)
+addCourses = ["CS-102", "CS-418", "CS-490"]
+delCourses = ["CS-201", "CS-212", "CS-222", "CS-288", "CS-289", "CS-302", "CS-312", "CS-316", "CS-320", "CS-322", "CS-330", "CS-388", "CS-389", "CS-488", "CS-489", "CS-438"]
+courseList.extend(addCourses)
+courseList = [c for c in courseList if c not in delCourses]
+courseList.sort()
+print(courseList)
+urlList = [l.replace('-','') for l in courseList]
+#print(urlList)
+
 #pip install wordcloud
 from wordcloud import WordCloud
-
 # Define a function to plot word cloud
 def plot_cloud(wordcloud):
     # Set figure size
@@ -187,6 +194,14 @@ from wordcloud import WordCloud, STOPWORDS
 wordcloud = WordCloud(width = 3000, height = 2000, random_state=1, background_color='white', colormap='Accent', collocations=False, stopwords = STOPWORDS).generate(syllabusData)
 # Plot
 plot_cloud(wordcloud)
+
+
+#freqDist = FreqDist(text)
+#print(freqDist) 
+#freqDist.plot(30)
+
+
+
 
 """
 
