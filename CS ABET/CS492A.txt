@@ -4,7 +4,7 @@ CS 492A&B  Senior Project
 Credits: 3+3
 Contact hours: 6
 
-Instructorís or course coordinatorís name: Cui Yu
+Instructor‚Äôs or course coordinator‚Äôs name: Cui Yu
 
 Required textbook: N.A. 
 
@@ -20,7 +20,7 @@ By the end of the course, students will:
 * Be able to describe correctly and clearly at least one area of current computer science research or application area important in industry, and also techniques that may be appropriate for implementing solutions.
 * Have prepared and submitted a written plan, describing the problem and the intended project.
 * Have devised and submitted a project design for implementation.
-* Have carried out an implementation, on at least ìproof of conceptî level, accompanied with appropriate documentation.
+* Have carried out an implementation, on at least ‚Äúproof of concept‚Äù level, accompanied with appropriate documentation.
 * Have made and presented an analysis of the capability and effectiveness of the implementation, including areas and kinds of shortcomings, and when feasible comparisons with other approaches.
 
    Additionally students will be able to satisfy the following reasoned oral discourse objectives:
