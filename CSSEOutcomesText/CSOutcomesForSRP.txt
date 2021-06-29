@@ -1,0 +1,35 @@
+(1) Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions
+"(2) Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program's discipline"
+(3) Communicate effectively in a variety of professional contexts
+(4) Recognize professional responsibilities and make informed judgements in computing practice based on legal and ethical principles
+(5) Function effectively as a member or leader of a team engaged in activities appropriate to the program's discipline
+(6) Apply computer science theory and software development fundamentals to produce computing-based solutions (MU)
+Ability to communicate effectively with a range of audiences
+Ability to design a computing based solution to meet a given set of requirements in the context of the program discipline
+Ability to implement and evaluate a computing based solution
+Analyze and compare data structures through the use of external applications
+Analyze the complexity of algorithms and how using various data structures will change the complexity of the algorithms
+Apply basic Structured and/or Object-Oriented Analysis Software Design techniques
+Apply Principles of Computing
+"Apply principles of math, statistics, and programming to identify solutions to computing problems"
+Be able to analyze a complex computing problem by applying appropriate mathematical foundations and digital logical theories to design an efficient solution for the problem
+Be aware of ethical responsibilities specified by the professional code of conduct and apply them to an example
+Complete a programming project that adheres to a set of specifications and requirements
+Complete a programming project that Applies computing theory and adheres to a set of specifications and requirements
+Create data structures without the use of code libraries
+Define the requirements of the computing problem and define the project scope
+Design a basic website using best practices
+Design algorithms to correctly solve problems
+Design and implement a database system
+Effectively communicate answers to problems from class literature
+Identify the code of ethics and the professional responsibilities of an engineering situation
+Perform and apply basic requirements engineering techniques
+Recognize Ethical Decisions
+Successfully engage in collaborative teamwork to complete all lifecycle aspects of a realistic software project
+Understand and apply computer science theory
+Understand conceptually the process of computer networking through the designated layers
+Understand the process of networking through research and problem solving
+Understanding of computer science theory and parallel programming
+Use a collaborative software version control system
+Use database principles to develop database project requirements
+Verbal Communication Skills

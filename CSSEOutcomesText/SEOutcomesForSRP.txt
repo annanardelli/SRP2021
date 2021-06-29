@@ -1,0 +1,44 @@
+"1. an ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics"
+"2. an ability to apply engineering design to produce solutions that meet specified needs with consideration of public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors"
+3. an ability to communicate effectively with a range of audiences
+"4. an ability to recognize ethical and professional responsibilities in engineering situations and make informed judgments, which must consider the impact of engineering solutions in global, economic, environmental, and societal contexts"
+"5. an ability to function effectively on a team whose members together provide leadership, create a collaborative and inclusive environment, establish goals, plan tasks, and meet objectives"
+"6. an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions"
+"7. an ability to acquire and apply new knowledge as needed, using appropriate learning strategies"
+Ability to collect and interpret agile measurement data
+Ability to communicate effectively in writing with a range of audiences
+Ability to design a computing based solution to meet a given set of requirements in the context of the program discipline
+Ability to design a computing based solution to meet a given set of requirements with appropriate software design patterns
+Ability to develop and conduct appropriate useability testing
+"Ability to develop, conduct, and analyze test cases of a computer solution to draw a conclusion"
+Ability to respond to questions or challenges during a reasoned oral presentation in a group setting
+"an ability to identify solutions that include considerations for public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors"
+"Apply principles of math, statistics, and programming to identify solutions to software process issues"
+Apply software engineering methodologies to class projects
+Communicate effectively with peers in a team environment
+Demonstrate the ability of independently learning a new software technology
+Demonstrate the ability to orally present ideas and information in a reasoned and effective manner
+Demonstrate the ability to properly present Project Plan documentation as a team
+Demonstrate the ability to properly present Project Plan documentation as an individual
+Demonstrate the ability to research and find answers to questions associated with case study
+Demonstrate the incorporation of new technology into the Practicum project
+Displays the capacity of understanding contemporary issues through the use of the Final Presentation
+Elicit Requirements
+"Elicit Requirements,identify project scope and Use cases"
+Identify constraints (non-functional requirements)
+Identify functional requirements
+Identify project scope with context diagrams
+Identify project scope with context diagrams and use cases
+Identify the code of ethics and the professional responsibilities of an engineering situation
+Maintain document clarity and avoid potential ambiguity by creating revised versions of Project Plan documentation
+"Make a judgment of an engineering solution by considering the global, economic, environmental, and societal contexts"
+Modeling and analysis of formal methods
+Presentation of final product with documentation
+"Presentation of final product with documentation, Ability to communicate effectively in writing with a range of audiences"
+Properly cite references to avoid potential threats of copyright infringement based on product market and research material
+Successfully engage in collaborative teamwork to complete all lifecycle aspects of a realistic software project
+Successfully engage in collaborative teamwork to complete all lifecycle aspects of a software project
+Successfully research and create a detailed Project Plan document for a given case study
+Use experimentation to analyze behaviors of formal methods
+Use sprints to facilitate agile development
+Verbal Communication Skills
