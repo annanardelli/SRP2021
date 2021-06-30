@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[164]:
+# In[209]:
 
 
 import pickle
@@ -13,13 +13,11 @@ import re
 import string
 
 import matplotlib.pyplot as plt
-from nltk import FreqDist
 import pandas as pd
-from collections import Counter
- 
+import numpy as np
 
 
-def wordFrequency(syl, cc):
+def wordFrequency(syl, cc, string, count):
     data = []
     syllabus = []
     catalog = []
@@ -36,21 +34,36 @@ def wordFrequency(syl, cc):
     seriesCC = pd.Series(catalog)
     syllabusCount = seriesSyl.value_counts().sort_index()
     catalogCount = seriesCC.value_counts().sort_index()
-    print(syllabusCount)
-    print(catalogCount)
-    #print(seriesSyl.value_counts().sort_index())
-    #print(seriesCC.value_counts().sort_index())
     
-    print()
-    print()
+    maximum = 0
+    max1 = max(syllabusCount)
+    max2 = max(catalogCount)
+    if max1 > max2:
+        maximum = max1
+    else:
+        maximum = max2
+        
+    if string == "outcomes":
+        legendLabel = "Outcomes"
+        title = courses[count] + " Syllabus vs. Outcomes"
+    else:
+        legendLabel = "Course Catalog"
+        title = courses[count] + " Syllabus vs. Course Catalog"
     
     plt.figure(figsize=(12,8))
-    plt.plot(syllabusCount)
-    plt.plot(catalogCount)
+    plt.plot(syllabusCount, label = "Syllabus")
+    plt.plot(catalogCount, label = legendLabel)
     plt.xticks(rotation=90)
-
-    #display plot
+    plt.xlabel("Words")
+    plt.yticks(np.arange(1, maximum+1, 1))
+    plt.ylabel("Frequency")
+    plt.legend(loc="upper left")
+    plt.title(title)
     plt.show()
+    
+    #correlation
+    difference = abs(syllabusCount - catalogCount)
+    print(difference)
     
 
 
@@ -86,10 +99,8 @@ def desc(cc, start):
 
 
 
-
 courses = ['CS-102', 'CS-104', 'CS-175', 'CS-175L', 'CS-176', 'CS-176L', 'CS-205', 'CS-205L', 'CS-286', 'CS-305', 'CS-310', 'CS-325', 'CS-414', 'CS-418', 'CS-432', 'CS-450', 'CS-490', 'CS-492A']
 urlList = [l.replace('-','') for l in courses]
-
 
 
 
@@ -118,32 +129,23 @@ for u in urlList:
     new_stopwords = ['ł']
     new_stopwords_list = stop_words.union(new_stopwords)
     words = [w for w in words if not w in new_stopwords_list]
-    #print()
-    #print(u)
-    #print(words)
     sylList.append(words)
     
-    
     file_name = u + "Syllabus.txt"
-
     open_file = open(file_name, "wb")
     pickle.dump(words, open_file)
     open_file.close()
-
     open_file = open(file_name, "rb")
     loaded_list = pickle.load(open_file)
     open_file.close()
 
-    #print(loaded_list)
-
-
+    
+    
 #COURSE CATALOG
-print()
 cataURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/UndergraduateCourseCatalog.txt"
 cataPage = requests.get(cataURL)
 cataData = cataPage.text
 cataData = cataData.splitlines()
-
 
 descList = []
 course = 0
@@ -155,21 +157,41 @@ for index, item in enumerate(cataData):
         if course < (len(courses) - 2):
             course += 1
 
-        
-
+count = -1
 courseLength = len(courses)
 for i in range(courseLength):
-    wordFrequency(sylList[i],descList[i])
-
-
+    count += 1
+    wordFrequency(sylList[i],descList[i],"cc",count)
     
 
     
-    
-    
-    
-    
+#OUTCOMES   
+outcomesURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CSSEOutcomesText/CSOutcomesForSRP.txt"
+outcomesPage = requests.get(outcomesURL)
+outcomesData = outcomesPage.text
 
+outcomesList = []
+tokens = word_tokenize(outcomesData) 
+#convert to lower case
+tokens = [w.lower() for w in tokens]
+#remove punctuation from each word
+table = str.maketrans('', '', string.punctuation)
+stripped = [w.translate(table) for w in tokens]
+#remove remaining tokens that are not alphabetic
+words = [word for word in stripped if word.isalpha()]
+#filter out stop words
+stop_words = set(stopwords.words('english'))
+new_stopwords = ['ł']
+new_stopwords_list = stop_words.union(new_stopwords)
+words = [w for w in words if not w in new_stopwords_list]
+outcomesList.append(words)      
+
+count = -1
+for i in range(courseLength):
+    count += 1
+    wordFrequency(sylList[i],outcomesList[0], "outcomes", count)    
+
+    
         
 """
 #CURRICULUM CHART
@@ -210,21 +232,6 @@ from wordcloud import WordCloud, STOPWORDS
 wordcloud = WordCloud(width = 3000, height = 2000, random_state=1, background_color='white', colormap='Accent', collocations=False, stopwords = STOPWORDS).generate(syllabusData)
 # Plot
 plot_cloud(wordcloud)
-
-
-#freqDist = FreqDist(text)
-#print(freqDist) 
-#freqDist.plot(30)
-
-
-#syllabus.sort()
-    #catalog.sort()
-    #d = pd.DataFrame(syllabus, columns = ['Syllabus'])
-    
-    #print(count)
-    
-    #series = d.squeeze()
-
 """
 
 
