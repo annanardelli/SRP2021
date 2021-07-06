@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import gensim
-import tfidf
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 def wordFrequency(syl, cc, string, count):
@@ -134,12 +134,13 @@ for u in urlList:
     loaded_list = pickle.load(open_file)
     open_file.close()
     
-    dictionary = gensim.corpora.Dictionary(sylList)
-    corpus = [dictionary.doc2bow(syl) for syl in sylList]
+    dictionary = gensim.corpora.Dictionary([words])
+    corpus = [dictionary.doc2bow([word]) for word in words]
+    print(corpus)
     tf_idf = gensim.models.TfidfModel(corpus)
     for doc in tf_idf[corpus]:
-        print([[dictionary[id], np.around(freq, decimals=2)] for id, freq in doc])
-    sims = gensim.similarities.Similarity(corpus, tf_idf[corpus],num_features=len(dictionary))
+        [[dictionary[id], np.around(freq, decimals=2)] for id, freq in doc]
+    sims = gensim.similarities.Similarity("SRP", tf_idf[corpus],num_features=len(dictionary))
     
     
 #COURSE CATALOG
@@ -164,11 +165,11 @@ for i in range(courseLength):
     count += 1
     wordFrequency(sylList[i],descList[i],"cc",count)
     
-for desc in descList:
-    desc_doc_bow = dictionary.doc2bow(desc)
-    query_doc_tf_idf = tf_idf[desc_doc_bow]
-    
-    print('Comparing Result:', sims[query_doc_tf_idf])
+
+desc_doc_bow = dictionary.doc2bow(descList[0])
+query_doc_tf_idf = tf_idf[desc_doc_bow]
+print(query_doc_tf_idf)
+sims[query_doc_tf_idf]
     
 #OUTCOMES   
 outcomesURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CSSEOutcomesText/CSOutcomesForSRP.txt"
