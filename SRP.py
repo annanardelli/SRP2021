@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[209]:
+
+
 import pickle
 from nltk.tokenize import word_tokenize
 import nltk
@@ -9,8 +15,6 @@ import string
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-import gensim
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 def wordFrequency(syl, cc, string, count):
@@ -59,6 +63,7 @@ def wordFrequency(syl, cc, string, count):
     
     #correlation
     difference = abs(syllabusCount - catalogCount)
+    print(difference)
     
 
 
@@ -133,14 +138,7 @@ for u in urlList:
     open_file = open(file_name, "rb")
     loaded_list = pickle.load(open_file)
     open_file.close()
-    
-    dictionary = gensim.corpora.Dictionary([words])
-    corpus = [dictionary.doc2bow([word]) for word in words]
-    print(corpus)
-    tf_idf = gensim.models.TfidfModel(corpus)
-    for doc in tf_idf[corpus]:
-        [[dictionary[id], np.around(freq, decimals=2)] for id, freq in doc]
-    sims = gensim.similarities.Similarity("SRP", tf_idf[corpus],num_features=len(dictionary))
+
     
     
 #COURSE CATALOG
@@ -166,10 +164,6 @@ for i in range(courseLength):
     wordFrequency(sylList[i],descList[i],"cc",count)
     
 
-desc_doc_bow = dictionary.doc2bow(descList[0])
-query_doc_tf_idf = tf_idf[desc_doc_bow]
-print(query_doc_tf_idf)
-sims[query_doc_tf_idf]
     
 #OUTCOMES   
 outcomesURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CSSEOutcomesText/CSOutcomesForSRP.txt"
@@ -195,4 +189,66 @@ outcomesList.append(words)
 count = -1
 for i in range(courseLength):
     count += 1
-    wordFrequency(sylList[i],outcomesList[0], "outcomes", count)  
+    wordFrequency(sylList[i],outcomesList[0], "outcomes", count)    
+
+    
+        
+"""
+#CURRICULUM CHART
+#gets list of courses from curriculum chart
+ccURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CurriculumChart/b-s-in-computer-science-3.txt"
+ccPage = requests.get(ccURL)
+ccData = ccPage.text
+#searches for courses in data
+ccSubstr = re.compile('CS-\d{3}\w{0,1}')
+courses = ccSubstr.findall(ccData)
+#edits courses in list
+courseList = []
+for c in courses:
+    if c not in courseList:
+        courseList.append(c)
+addCourses = ["CS-102", "CS-418", "CS-490"]
+delCourses = ["CS-201", "CS-212", "CS-222", "CS-288", "CS-289", "CS-302", "CS-312", "CS-316", "CS-320", "CS-322", "CS-330", "CS-388", "CS-389", "CS-488", "CS-489", "CS-438"]
+courseList.extend(addCourses)
+courseList = [c for c in courseList if c not in delCourses]
+courseList.sort()
+print(courseList)
+urlList = [l.replace('-','') for l in courseList]
+#print(urlList)
+
+#pip install wordcloud
+from wordcloud import WordCloud
+# Define a function to plot word cloud
+def plot_cloud(wordcloud):
+    # Set figure size
+    plt.figure(figsize=(40, 30))
+    # Display image
+    plt.imshow(wordcloud) 
+    # No axis details
+    plt.axis("off");
+# Import package
+from wordcloud import WordCloud, STOPWORDS
+# Generate word cloud
+wordcloud = WordCloud(width = 3000, height = 2000, random_state=1, background_color='white', colormap='Accent', collocations=False, stopwords = STOPWORDS).generate(syllabusData)
+# Plot
+plot_cloud(wordcloud)
+"""
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
