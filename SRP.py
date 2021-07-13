@@ -32,6 +32,7 @@ def wordFrequency(syl, cc, string, count):
     catalogCount = seriesCC.value_counts().sort_index()
     #print(syllabusCount)
     #print(catalogCount)
+    wordSimilarity(syllabusCount, catalogCount)
     
     maximum = 0
     max1 = max(syllabusCount)
@@ -61,8 +62,26 @@ def wordFrequency(syl, cc, string, count):
     plt.show()
     """
     
-
-
+def wordSimilarity(syl, cc):
+    #WORD SIMILARITY = (CC WORD COUNT / CC TOTAL WORD COUNT) * (LESSER OF SYL WORD COUNT AND CC WORD COUNT)\
+    syl = syl.tolist()
+    cc = cc.tolist()
+    total = 0
+    lesser = 0
+    ccLength = 0
+    count = 0
+    for ccWord in cc:
+        ccLength += ccWord
+    for ccWord in cc:
+        if syl[count] < ccWord:
+            lesser = syl[count]
+        else:
+            lesser = ccWord
+        count+=1
+        wordSim = ((ccWord/(ccLength)) * (lesser))
+        total = wordSim + total
+    print(total)
+    
 def descSplit(desc):
     descText = " ".join(desc)
     tokens = word_tokenize(descText) 
@@ -135,14 +154,6 @@ for u in urlList:
     loaded_list = pickle.load(open_file)
     open_file.close()
     
-    dictionary = gensim.corpora.Dictionary([words])
-    corpus = [dictionary.doc2bow([word]) for word in words]
-    #print(corpus)
-    tf_idf = gensim.models.TfidfModel(corpus)
-    #for doc in tf_idf[corpus]:
-        #print([[dictionary[id], np.around(freq, decimals=2)] for id, freq in doc])
-    sims = gensim.similarities.Similarity("SRP", tf_idf[corpus],num_features=len(dictionary))
-    
     
 #COURSE CATALOG
 cataURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/UndergraduateCourseCatalog.txt"
@@ -165,32 +176,12 @@ courseLength = len(courses)
 for i in range(courseLength):
     count += 1
     wordFrequency(sylList[i],descList[i],"cc",count)
-    
-count = 0
-for desc in descList:
-    desc_doc_bow = dictionary.doc2bow(desc)
-    query_doc_tf_idf = tf_idf[desc_doc_bow]
-    print(count)
-    count += 1
-    #print(query_doc_tf_idf)
-    sims[query_doc_tf_idf]
-    
-    avg_sims = []
-    sum_of_sims =(np.sum(sims[query_doc_tf_idf], dtype=np.float32))
-    avg = sum_of_sims / len(descSplit(desc))
-    print(f'avg: {sum_of_sims / len(descSplit(desc))}')
-    avg_sims.append(avg)
-    total_avg = np.sum(avg_sims, dtype=np.float)
-    percentage_of_similarity = round(float(total_avg) * 100)
-    if percentage_of_similarity >= 100:
-            percentage_of_similarity = 100
- 
-"""
+
+
 #OUTCOMES   
 outcomesURL = "https://raw.githubusercontent.com/annanardelli/SRP2021/main/CSSEOutcomesText/CSOutcomesForSRP.txt"
 outcomesPage = requests.get(outcomesURL)
 outcomesData = outcomesPage.text
-
 outcomesList = []
 tokens = word_tokenize(outcomesData) 
 #convert to lower case
@@ -206,8 +197,10 @@ new_stopwords = ['ł']
 new_stopwords_list = stop_words.union(new_stopwords)
 words = [w for w in words if not w in new_stopwords_list]
 outcomesList.append(words)      
-
 count = -1
+for i in range(courseLength):
+    count += 1
+    wordFrequency(sylList[i],outcomesList[0], "outcomes", count) 
 for i in range(courseLength):
     count += 1
     wordFrequency(sylList[i],outcomesList[0], "outcomes", count) 
