@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[38]:
+# In[94]:
 
 
 import pickle
@@ -218,11 +218,11 @@ for i in range(courseLength):
 
 
 
-plt.figure(figsize=(12,8)) 
+plt.figure(figsize=(20,8)) 
 x_axis = np.arange(len(courses))
   
-plt.bar(x_axis - 0.1, wordSimCC, 0.4, label = 'Syllabus vs. CC', align = 'center')
-plt.bar(x_axis + 0.5, wordSimOut, 0.4, label = 'Syllabus vs. Outcomes', align = 'center')
+plt.bar(x_axis - 0.2, wordSimCC, 0.35, label = 'Syllabus vs. CC', align = 'center')
+plt.bar(x_axis + 0.2, wordSimOut, 0.35, label = 'Syllabus vs. Outcomes', align = 'center')
   
 plt.xticks(x_axis, courses)
 plt.xticks(rotation=90)
@@ -231,6 +231,24 @@ plt.ylabel("Word Similarity")
 plt.title("Word Similarity")
 plt.legend()
 plt.show()
+
+
+#average 
+wordSimAverages = []
+count = 0
+for i in wordSimCC:
+    avg = 0
+    total = 0
+    total += i
+    total += wordSimOut[count]
+    count += 1
+    avg = total / 2
+    wordSimAverages.append(avg)
+
+df = pd.DataFrame(wordSimAverages, index=courses, columns= ['Average'])
+df = df.sort_values(by=['Average'],ascending=False)
+#print(df)
+x = df.plot.barh(rot=0, figsize=(12,8))
 
 
 # In[ ]:
