@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[38]:
+
+
 import pickle
 from nltk.tokenize import word_tokenize
 import nltk
@@ -32,7 +38,6 @@ def wordFrequency(syl, cc, string, count):
     catalogCount = seriesCC.value_counts().sort_index()
     #print(syllabusCount)
     #print(catalogCount)
-    wordSimilarity(syllabusCount, catalogCount)
     
     maximum = 0
     max1 = max(syllabusCount)
@@ -45,9 +50,11 @@ def wordFrequency(syl, cc, string, count):
     if string == "outcomes":
         legendLabel = "Outcomes"
         title = courses[count] + " Syllabus vs. Outcomes"
+        wordSimilarity(syllabusCount, catalogCount, "outcomes")
     else:
         legendLabel = "Course Catalog"
         title = courses[count] + " Syllabus vs. Course Catalog"
+        wordSimilarity(syllabusCount, catalogCount, "cc")
     
     """
     plt.figure(figsize=(12,8))
@@ -61,8 +68,11 @@ def wordFrequency(syl, cc, string, count):
     plt.title(title)
     plt.show()
     """
+
     
-def wordSimilarity(syl, cc):
+wordSimCC = []
+wordSimOut = []
+def wordSimilarity(syl, cc, string):
     #WORD SIMILARITY = (CC WORD COUNT / CC TOTAL WORD COUNT) * (LESSER OF SYL WORD COUNT AND CC WORD COUNT)\
     syl = syl.tolist()
     cc = cc.tolist()
@@ -80,7 +90,11 @@ def wordSimilarity(syl, cc):
         count+=1
         wordSim = ((ccWord/(ccLength)) * (lesser))
         total = wordSim + total
-    print(total)
+    #print(total)
+    if string == "outcomes":
+        wordSimOut.append(total)
+    else:
+        wordSimCC.append(total)
     
 def descSplit(desc):
     descText = " ".join(desc)
@@ -201,7 +215,38 @@ count = -1
 for i in range(courseLength):
     count += 1
     wordFrequency(sylList[i],outcomesList[0], "outcomes", count) 
-for i in range(courseLength):
-    count += 1
-    wordFrequency(sylList[i],outcomesList[0], "outcomes", count) 
-"""
+
+
+
+plt.figure(figsize=(12,8)) 
+x_axis = np.arange(len(courses))
+  
+plt.bar(x_axis - 0.1, wordSimCC, 0.4, label = 'Syllabus vs. CC', align = 'center')
+plt.bar(x_axis + 0.5, wordSimOut, 0.4, label = 'Syllabus vs. Outcomes', align = 'center')
+  
+plt.xticks(x_axis, courses)
+plt.xticks(rotation=90)
+plt.xlabel("Courses")
+plt.ylabel("Word Similarity")
+plt.title("Word Similarity")
+plt.legend()
+plt.show()
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
