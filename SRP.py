@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[94]:
+# In[10]:
 
 
 import pickle
@@ -15,8 +15,6 @@ import string
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-import gensim
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 def wordFrequency(syl, cc, string, count):
@@ -248,7 +246,8 @@ for i in wordSimCC:
 df = pd.DataFrame(wordSimAverages, index=courses, columns= ['Average'])
 df = df.sort_values(by=['Average'],ascending=False)
 #print(df)
-x = df.plot.barh(rot=0, figsize=(12,8))
+x = df.plot.barh(rot=0, figsize=(12,8), title = "Average Word Similarity", xlabel = "Average Word Similarity", width = 0.7)
+x.set_ylabel("Course")
 
 
 # In[ ]:
