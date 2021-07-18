@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[10]:
+# In[36]:
 
 
 import pickle
@@ -15,7 +15,6 @@ import string
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-
 
 def wordFrequency(syl, cc, string, count):
     data = []
@@ -45,27 +44,31 @@ def wordFrequency(syl, cc, string, count):
     else:
         maximum = max2
         
+    fileName = " "
     if string == "outcomes":
         legendLabel = "Outcomes"
         title = courses[count] + " Syllabus vs. Outcomes"
         wordSimilarity(syllabusCount, catalogCount, "outcomes")
+        fileName = courses[count] + 'Outcomes.png'
     else:
         legendLabel = "Course Catalog"
         title = courses[count] + " Syllabus vs. Course Catalog"
         wordSimilarity(syllabusCount, catalogCount, "cc")
+        fileName = courses[count] + 'CC.png'
     
-    """
+    
     plt.figure(figsize=(12,8))
-    plt.plot(syllabusCount, label = "Syllabus")
-    plt.plot(catalogCount, label = legendLabel)
+    plt.plot(syllabusCount, label = "Syllabus", color = colors[0])
+    plt.plot(catalogCount, label = legendLabel, color = colors[1])
     plt.xticks(rotation=90)
     plt.xlabel("Words")
     plt.yticks(np.arange(1, maximum+1, 1))
     plt.ylabel("Frequency")
     plt.legend(loc="upper left")
     plt.title(title)
+    plt.savefig(fileName)
     plt.show()
-    """
+    
 
     
 wordSimCC = []
@@ -129,7 +132,7 @@ def desc(cc, start):
 courses = ['CS-102', 'CS-104', 'CS-175', 'CS-175L', 'CS-176', 'CS-176L', 'CS-205', 'CS-205L', 'CS-286', 'CS-305', 'CS-310', 'CS-325', 'CS-414', 'CS-418', 'CS-432', 'CS-450', 'CS-490', 'CS-492A']
 urlList = [l.replace('-','') for l in courses]
 
-
+colors = ["#4285f4", "#ea4335"]
 
 #SYLLABUS
 sylList = []
@@ -219,15 +222,16 @@ for i in range(courseLength):
 plt.figure(figsize=(20,8)) 
 x_axis = np.arange(len(courses))
   
-plt.bar(x_axis - 0.2, wordSimCC, 0.35, label = 'Syllabus vs. CC', align = 'center')
-plt.bar(x_axis + 0.2, wordSimOut, 0.35, label = 'Syllabus vs. Outcomes', align = 'center')
+plt.bar(x_axis - 0.2, wordSimCC, 0.35, label = 'Syllabus vs. CC', align = 'center', color = colors[0])
+plt.bar(x_axis + 0.2, wordSimOut, 0.35, label = 'Syllabus vs. Outcomes', align = 'center', color = colors[1])
   
 plt.xticks(x_axis, courses)
 plt.xticks(rotation=90)
 plt.xlabel("Courses")
-plt.ylabel("Word Similarity")
-plt.title("Word Similarity")
+plt.ylabel("Word Similarity Measure")
+plt.title("Word Similarity for Each Course")
 plt.legend()
+plt.savefig('WordSimilarity.png')
 plt.show()
 
 
@@ -246,8 +250,14 @@ for i in wordSimCC:
 df = pd.DataFrame(wordSimAverages, index=courses, columns= ['Average'])
 df = df.sort_values(by=['Average'],ascending=False)
 #print(df)
-x = df.plot.barh(rot=0, figsize=(12,8), title = "Average Word Similarity", xlabel = "Average Word Similarity", width = 0.7)
+x = df.plot.barh(rot=0, figsize=(12,8), title = "Average Word Similarity for Each Course", xticks = df['Average'], width = 0.7, color = colors)
 x.set_ylabel("Course")
+x.set_xlabel("Average Word Similarity Measure")
+maxVal = max(df['Average']+0.1)
+x.xaxis.set_ticks(np.arange(0, maxVal, 0.2))
+x.get_legend().remove()
+fig = x.get_figure()
+fig.savefig('AverageWordSimilarity.png')
 
 
 # In[ ]:
